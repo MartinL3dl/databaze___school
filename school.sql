@@ -1,3 +1,5 @@
+12.1
+
 create database school;
 
 

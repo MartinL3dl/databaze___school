@@ -109,3 +109,30 @@ INSERT INTO `subjects` (`id_subject`, `name`, `description`, `shortname`) VALUES
 (8,	'AHHHHH',	'placeholder',	'IDUNNO'),
 (9,	'AHHHHH',	'placeholder',	'IDUNNO'),
 (10,	'AHHHHH',	'placeholder',	'IDUNNO');
+
+
+School
+_____________________________________________
+CREATE TABLE classroom (
+id_classroom int AUTO_INCREMENT,
+number text,
+description text,
+building INT,
+seats_count int,
+is_computers_lab tinyint,
+PRIMARY KEY (id_classroom) 
+);
+
+INSERT INTO `classroom` (`id_classroom`, `number`, `description`, `building`, `seats_count`, `is_computers_lab`) VALUES
+(1,	'8A',	'placeholder',	2,	32,	0),
+(2,	'8B',	'placeholder',	1,	32,	0),
+(3,	'8H',	'placeholder',	1,	44,	0),
+(4,	'6A',	'placeholder',	3,	21,	1),
+(5,	'5A',	'placeholder',	2,	32,	0),
+(6,	'3B',	'placeholder',	1,	32,	0),
+(7,	'4B',	'placeholder',	3,	32,	0),
+(8,	'9B',	'placeholder',	2,	32,	0),
+(9,	'9C',	'placeholder',	3,	32,	0),
+(10,	'8C',	'placeholder',	3,	21,	1),
+(11,	'7C',	'placeholder',	2,	21,	0),
+(12,	'6C',	'placeholder',	1,	21,	1);

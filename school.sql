@@ -136,3 +136,36 @@ INSERT INTO `classroom` (`id_classroom`, `number`, `description`, `building`, `s
 (10,	'8C',	'placeholder',	3,	21,	1),
 (11,	'7C',	'placeholder',	2,	21,	0),
 (12,	'6C',	'placeholder',	1,	21,	1);
+
+
+_____________________________________________
+
+ALTER TABLE classroom
+ADD UNIQUE (number);
+
+ALTER TABLE teachers
+ADD UNIQUE (lastname);
+
+ALTER TABLE subjects
+ADD UNIQUE (name);
+
+CREATE TABLE schedule (
+id_schedule int AUTO_INCREMENT,
+id_classroom int,
+id_teacher int,
+id_subject int,
+lesson_number int,
+day_of_week tinyint(5)
+);
+
+INSERT INTO `schedule` (`id_schedule`, `id_classroom`, `id_teacher`, `id_subject`, `lesson_number`, `day_of_week`) VALUES
+(1,	1,	1,	1,	1,	1),
+(2,	2,	2,	2,	2,	1),
+(3,	2,	2,	2,	3,	1),
+(4,	1,	1,	1,	4,	1),
+(5,	3,	3,	4,	5,	1),
+(6,	3,	3,	4,	6,	1),
+(7,	4,	4,	4,	7,	1),
+(8,	4,	4,	4,	8,	1),
+(9,	5,	5,	5,	9,	1),
+(10,	2,	1,	6,	10,	1);

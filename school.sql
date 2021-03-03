@@ -169,3 +169,7 @@ INSERT INTO `schedule` (`id_schedule`, `id_classroom`, `id_teacher`, `id_subject
 (8,	4,	4,	4,	8,	1),
 (9,	5,	5,	5,	9,	1),
 (10,	2,	1,	6,	10,	1);
+
+_____________________________________________
+alter table students
+add unique (email);

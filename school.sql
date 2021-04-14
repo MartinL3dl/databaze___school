@@ -173,3 +173,43 @@ INSERT INTO `schedule` (`id_schedule`, `id_classroom`, `id_teacher`, `id_subject
 _____________________________________________
 alter table students
 add unique (email);
+
+
+_____________________________________________
+25.3
+alter table teachers
+change id_teacher id int
+
+alter table students
+change id_student id int
+
+alter table classroom
+change id_classroom id int
+
+alter table schedule
+change id_schedule id int
+
+alter table subjects
+change id_subject id int
+
+
+_____________________________________________
+ALTER TABLE students 
+RENAME TO student; 
+
+ALTER TABLE teachers
+RENAME TO teacher; 
+
+ALTER TABLE classrooms
+RENAME TO classroom; 
+
+ALTER TABLE student
+RENAME COLUMN ID_student TO student_ID;
+
+ALTER TABLE teacher
+RENAME COLUMN ID_teacher TO teacher_ID;
+
+ALTER TABLE schedule
+RENAME COLUMN ID_schedule TO ID;
+
+

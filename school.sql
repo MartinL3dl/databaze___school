@@ -213,3 +213,12 @@ ALTER TABLE schedule
 RENAME COLUMN ID_schedule TO ID;
 
 
+_____________________________________________
+ADD FOREIGN KEY (classroom_id) REFERENCES classroom(number),
+ADD FOREIGN KEY (teacher_id) REFERENCES teacher(firstname),
+ADD FOREIGN KEY (subject_id) REFERENCES subject(name);
+
+SELECT * FROM schedule sch
+JOIN subject su ON sch.subject_id = su.id
+JOIN classroom cl ON sch.classroom_id = cl.id
+JOIN teacher te ON sch.teacher_id = te.id;
